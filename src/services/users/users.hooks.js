@@ -14,7 +14,7 @@ const restrict = [
 module.exports = {
   before: {
     all: [],
-    find: [ authenticate('jwt') ],
+    find: [],
     get: [ ...restrict ],
     create: [ hashPassword() ],
     update: [ ...restrict, hashPassword() ],
@@ -27,6 +27,11 @@ module.exports = {
       commonHooks.when(
         hook => hook.params.provider,
         commonHooks.discard('password')
+      ),
+      commonHooks.unless(
+        hook => (hook.params.user &&
+          hook.params.user._id === hook.data._id), // don't show emails to other users
+        commonHooks.discard('email')
       )
     ],
     find: [],
