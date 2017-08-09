@@ -6,6 +6,8 @@ const restrict = [
   restrictToAuthenticated(),
 ];
 
+const setCurrentColor = require('../../hooks/setCurrentColor');
+
 const restrictToOwners = [
   ...restrict,
   restrictToOwner({
@@ -17,7 +19,7 @@ module.exports = {
   before: {
     all: [], // authenticate('jwt')
     find: [],
-    get: [askQuestion()], //askQuestion()
+    get: [authenticate('jwt'), askQuestion()],
     create: [
       ...restrict,
       associateCurrentUser({ as: 'teacherId' }),
@@ -29,7 +31,7 @@ module.exports = {
 
   after: {
     all: [],
-    find: [],
+    find: [setCurrentColor()],
     get: [],
     create: [],
     update: [],
