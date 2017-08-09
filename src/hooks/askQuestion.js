@@ -3,7 +3,16 @@
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
 
   return function askQuestion (hook) {
-    debugger;
+
+    if (!hook.params.query.ask) return null; // stop here if just fetching
+
+    hook.result.data = hook.result.data[0];
+
+    // var redStudents = hook.result.data.filter((student) => {
+    //   return student.currentColor === 'red';
+    // });
+    // hook.result.data = redStudents;
+
     // const currentUser = hook.params.user;
     //
     // hook.data.title = `${currentUser.name}'s game`;
@@ -61,8 +70,6 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     // }
     //
     // console.log('You can ask a question to ' + pickStudent());
-
-    hook.data._id = '598994f9af90da0bab4a99b1';
 
     return Promise.resolve(hook);
   };

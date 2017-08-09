@@ -1,11 +1,11 @@
 const { authenticate } = require('feathers-authentication').hooks;
 const { restrictToOwner, associateCurrentUser, restrictToAuthenticated } = require('feathers-authentication-hooks');
-const askQuestion = require('../../hooks/askQuestion');
 const restrict = [
   authenticate('jwt'),
   restrictToAuthenticated(),
 ];
 
+const askQuestion = require('../../hooks/askQuestion');
 const setCurrentColor = require('../../hooks/setCurrentColor');
 
 const restrictToOwners = [
@@ -19,19 +19,19 @@ module.exports = {
   before: {
     all: [], // authenticate('jwt')
     find: [],
-    get: [authenticate('jwt'), askQuestion()],
+    get: [authenticate('jwt')],
     create: [
       ...restrict,
       associateCurrentUser({ as: 'teacherId' }),
     ],
     update: [...restrictToOwners],
     patch: [...restrictToOwners],
-    remove: [...restrictToOwners]
+    remove: [authenticate('jwt')]
   },
 
   after: {
     all: [],
-    find: [setCurrentColor()],
+    find: [setCurrentColor(), askQuestion()],
     get: [],
     create: [],
     update: [],
