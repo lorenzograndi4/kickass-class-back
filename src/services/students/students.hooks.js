@@ -1,6 +1,6 @@
 const { authenticate } = require('feathers-authentication').hooks;
 const { restrictToOwner, associateCurrentUser, restrictToAuthenticated } = require('feathers-authentication-hooks');
-
+const askQuestion = require('../../hooks/askQuestion');
 const restrict = [
   authenticate('jwt'),
   restrictToAuthenticated(),
@@ -17,7 +17,7 @@ module.exports = {
   before: {
     all: [], // authenticate('jwt')
     find: [],
-    get: [],
+    get: [askQuestion()], //askQuestion()
     create: [
       ...restrict,
       associateCurrentUser({ as: 'teacherId' }),
