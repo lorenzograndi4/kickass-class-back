@@ -12,7 +12,7 @@ const user = {
 
 const students = [
   { name: 'Lorenzo',
-    picture: './assets/1.png',
+    picture: 'http://res.cloudinary.com/lorenzocloudinary/image/upload/v1502304089/class/1.png',
     classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'yellow', remark: 'Boring' },
@@ -21,7 +21,7 @@ const students = [
     ]
   },
   { name: 'Tobia',
-    picture: './assets/2.jpeg',
+    picture: 'http://res.cloudinary.com/lorenzocloudinary/image/upload/v1502304089/class/2.jpg',
     classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'yellow', remark: 'Boring' },
@@ -30,7 +30,7 @@ const students = [
     ]
   },
   { name: 'Freddy',
-    picture: './assets/3.jpeg',
+    picture: 'http://res.cloudinary.com/lorenzocloudinary/image/upload/v1502304089/class/3.jpg',
     classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'yellow', remark: 'Boring' },
@@ -39,7 +39,7 @@ const students = [
     ]
   },
   { name: 'Lazy Louie',
-    picture: './assets/4.jpeg',
+    picture: 'http://res.cloudinary.com/lorenzocloudinary/image/upload/v1502304089/class/4.jpg',
     classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'red', remark: 'Boring' },
@@ -49,7 +49,7 @@ const students = [
   },
   { name: 'Stubborn Student',
     classId: 9,
-    picture: './assets/5.jpeg',
+    picture: 'http://res.cloudinary.com/lorenzocloudinary/image/upload/v1502304089/class/5.jpg',
     evaluations: [
       {date: Date('2017-08-08'), color: 'yellow', remark: 'Boring' },
       {date: Date('2017-08-09'), color: 'yellow', remark: 'Lazy' },
@@ -58,7 +58,7 @@ const students = [
   },
   { name: 'Crazy Chris',
     classId: 9,
-    picture: './assets/6.png',
+    picture: 'http://res.cloudinary.com/lorenzocloudinary/image/upload/v1502304089/class/6.png',
     evaluations: [
       {date: Date('2017-08-08'), color: 'red', remark: 'Boring' },
       {date: Date('2017-08-09'), color: 'yellow', remark: 'Lazy' },
@@ -66,7 +66,7 @@ const students = [
     ]
   },
   { name: 'Damn Daniel',
-    picture: './assets/7.png',
+    picture: 'http://res.cloudinary.com/lorenzocloudinary/image/upload/v1502304089/class/7.png',
     classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'green' },
@@ -75,7 +75,7 @@ const students = [
     ]
   },
   { name: 'Silly Silvia',
-    picture: './assets/8.jpeg',
+    picture: 'http://res.cloudinary.com/lorenzocloudinary/image/upload/v1502304090/class/8.jpg',
     classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'yellow', remark: 'Boring' },
@@ -84,7 +84,7 @@ const students = [
     ]
   },
   { name: 'Boring Bill',
-    picture: './assets/9.jpeg',
+    picture: 'http://res.cloudinary.com/lorenzocloudinary/image/upload/v1502304089/class/9.jpg',
     classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'yellow', remark: 'Boring' },
