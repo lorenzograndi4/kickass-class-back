@@ -13,6 +13,7 @@ const user = {
 const students = [
   { name: 'Lorenzo',
     picture: './assets/1.png',
+    classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'yellow', remark: 'Boring' },
       {date: Date('2017-08-09'), color: 'red', remark: 'Lazy' },
@@ -21,6 +22,7 @@ const students = [
   },
   { name: 'Tobia',
     picture: './assets/2.jpeg',
+    classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'yellow', remark: 'Boring' },
       {date: Date('2017-08-09'), color: 'yellow', remark: 'Lazy' },
@@ -29,6 +31,7 @@ const students = [
   },
   { name: 'Freddy',
     picture: './assets/3.jpeg',
+    classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'yellow', remark: 'Boring' },
       {date: Date('2017-08-09'), color: 'green' },
@@ -37,6 +40,7 @@ const students = [
   },
   { name: 'Lazy Louie',
     picture: './assets/4.jpeg',
+    classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'red', remark: 'Boring' },
       {date: Date('2017-08-09'), color: 'yellow', remark: 'Lazy' },
@@ -44,6 +48,7 @@ const students = [
     ]
   },
   { name: 'Stubborn Student',
+    classId: 9,
     picture: './assets/5.jpeg',
     evaluations: [
       {date: Date('2017-08-08'), color: 'yellow', remark: 'Boring' },
@@ -52,6 +57,7 @@ const students = [
     ]
   },
   { name: 'Crazy Chris',
+    classId: 9,
     picture: './assets/6.png',
     evaluations: [
       {date: Date('2017-08-08'), color: 'red', remark: 'Boring' },
@@ -61,6 +67,7 @@ const students = [
   },
   { name: 'Damn Daniel',
     picture: './assets/7.png',
+    classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'green' },
       {date: Date('2017-08-09'), color: 'yellow', remark: 'Lazy' },
@@ -69,6 +76,7 @@ const students = [
   },
   { name: 'Silly Silvia',
     picture: './assets/8.jpeg',
+    classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'yellow', remark: 'Boring' },
       {date: Date('2017-08-09'), color: 'green', remark: 'Lazy' },
@@ -77,6 +85,7 @@ const students = [
   },
   { name: 'Boring Bill',
     picture: './assets/9.jpeg',
+    classId: 9,
     evaluations: [
       {date: Date('2017-08-08'), color: 'yellow', remark: 'Boring' },
       {date: Date('2017-08-09'), color: 'yellow', remark: 'Lazy' },

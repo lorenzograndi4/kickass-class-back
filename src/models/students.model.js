@@ -16,6 +16,7 @@ module.exports = function (app) {
   const students = new Schema({
     name: { type: String, required: true },
     picture: { type: String },
+    classId: { type: Number, default: 9 }, // will change to Schema.Types.ObjectId, ref: 'classes'
     evaluations: [evaluationSchema],
     currentColor: { type: String, required: true, default: 'green' },
     createdAt: { type: Date, default: Date.now },
