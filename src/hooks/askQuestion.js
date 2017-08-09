@@ -5,12 +5,14 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
   return function askQuestion (hook) {
 
     if (!hook.params.query.ask) return null; // stop here if just fetching
-    debugger;
 
-    var redStudents = hook.result.data.filter((student) => {
-      return student.currentColor === 'red';
-    });
-    hook.result.data = redStudents;
+    hook.result.data = hook.result.data[0];
+
+    // var redStudents = hook.result.data.filter((student) => {
+    //   return student.currentColor === 'red';
+    // });
+    // hook.result.data = redStudents;
+
     // const currentUser = hook.params.user;
     //
     // hook.data.title = `${currentUser.name}'s game`;

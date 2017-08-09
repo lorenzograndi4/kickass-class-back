@@ -26,7 +26,7 @@ module.exports = {
     ],
     update: [...restrictToOwners],
     patch: [...restrictToOwners],
-    remove: [...restrictToOwners]
+    remove: [authenticate('jwt')]
   },
 
   after: {
