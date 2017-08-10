@@ -3,7 +3,6 @@ const rest = require('feathers-rest/client');
 const superagent = require('superagent');
 const hooks = require('feathers-hooks');
 const auth = require('feathers-authentication-client');
-const moment = require('moment');
 
 const user = {
   name: 'teacher',
@@ -113,16 +112,14 @@ feathersClient.service('users').create(user)
         students.map((student) => {
           feathersClient.service('students').create(student)
             .then((result) => {
+              /*eslint no-console: ["error", { allow: ["log", "warn", "error"] }] */
               console.log('Student seeded...', result.name);
             }).catch((error) => {
               console.error('Error seeding student!', error.message);
             });
-        })
+        });
       })
       .catch(function(error){
         console.error('Error authenticating!', error);
       });
-  })
-  .catch(function(error) {
-    console.error('Error creating user!');
-});
+  });
