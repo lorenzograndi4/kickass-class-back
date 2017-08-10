@@ -1,5 +1,5 @@
 const { authenticate } = require('feathers-authentication').hooks;
-const { restrictToOwner, associateCurrentUser, restrictToAuthenticated } = require('feathers-authentication-hooks');
+const { associateCurrentUser, restrictToAuthenticated } = require('feathers-authentication-hooks');
 const restrict = [
   authenticate('jwt'),
   restrictToAuthenticated(),
@@ -7,13 +7,15 @@ const restrict = [
 
 const askQuestion = require('../../hooks/askQuestion');
 const setCurrentColor = require('../../hooks/setCurrentColor');
+const addEvaluation = require('../../hooks/addEvaluation');
 
-const restrictToOwners = [
-  ...restrict,
-  restrictToOwner({
-    ownerField: 'teacherId'
-  })
-];
+// Maybe later
+// const restrictToOwners = [
+//   ...restrict,
+//   restrictToOwner({
+//     ownerField: 'teacherId'
+//   })
+// ];
 
 module.exports = {
   before: {
@@ -24,8 +26,8 @@ module.exports = {
       ...restrict,
       associateCurrentUser({ as: 'teacherId' }),
     ],
-    update: [...restrictToOwners],
-    patch: [...restrictToOwners],
+    update: [...restrict],
+    patch: [...restrict, addEvaluation()],
     remove: [authenticate('jwt')]
   },
 
