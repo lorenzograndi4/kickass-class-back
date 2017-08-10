@@ -4,7 +4,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
 
   return function askQuestion (hook) {
 
-    if (!hook.params.query.ask) return null; // stop here if just fetching
+    if (hook.params.query.ask === undefined) return Promise.resolve(hook); // stop here if just fetching
 
     hook.result.data = hook.result.data[0];
 

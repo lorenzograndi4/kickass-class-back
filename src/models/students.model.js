@@ -8,8 +8,8 @@ module.exports = function (app) {
 
   const evaluationSchema = new Schema({
     studentId: { type: Schema.Types.ObjectId, ref: 'students' },
-    date: { type: Date, default: Date.now },
-    color: { type: String, required: false, default: 'green' },
+    date: { type: String, unique: true, default: '06 08 2017' },
+    color: { type: String, required: true, default: 'green' },
     remark: { type: String, required: false, default: null }
   });
 
