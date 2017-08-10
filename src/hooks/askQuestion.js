@@ -3,26 +3,10 @@
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
 
   return function askQuestion (hook) {
-
     if (hook.params.query.ask === undefined) return Promise.resolve(hook); // stop here if just fetching
 
     hook.result.data = hook.result.data[0];
 
-    // var redStudents = hook.result.data.filter((student) => {
-    //   return student.currentColor === 'red';
-    // });
-    // hook.result.data = redStudents;
-
-    // const currentUser = hook.params.user;
-    //
-    // hook.data.title = `${currentUser.name}'s game`;
-    // hook.data.ownerId = currentUser._id; // assign the owner of the game
-    // hook.data.players = [{
-    //   userId: currentUser._id
-    // }]; // add the owner to the players, as the first player in the game
-    // // Hooks can either return nothing or a promise
-    // // that resolves with the `hook` object for asynchronous operations
-    //
     // var students = [
     //   { name: 'Lorenzo', currentColor: 'green' },
     //   { name: 'Tobia', currentColor: 'green' },

@@ -33,7 +33,7 @@ module.exports = {
 
   after: {
     all: [],
-    find: [setCurrentColor(), askQuestion()],
+    find: [setCurrentColor()],
     get: [],
     create: [],
     update: [],
